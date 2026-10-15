@@ -1,0 +1,663 @@
+{
+  "actions": {
+    "phi_screen": "passed (no identifier-like columns or value patterns found)",
+    "duplicate_encounters_dropped": 347,
+    "encounters_quarantined_bad_dates": 86,
+    "unknown_disposition_rows": 726,
+    "creatinine_unit_shift_rows_converted": 14547,
+    "creatinine_unit_shift_facilities": [
+      "F04"
+    ],
+    "implausible_lab_values_removed": 4126,
+    "diagnoses_orphans_dropped": 0,
+    "medications_orphans_dropped": 0,
+    "labs_orphans_dropped": 0,
+    "date_shift": "not applied (synthetic data have no real calendar dates)",
+    "pseudonymisation": "HMAC-SHA256 keyed pseudonyms (DEMO SALT in use - set READMIT_SALT for any non-demo data)"
+  },
+  "pre": {
+    "row_counts": {
+      "facilities": 10,
+      "patients": 90000,
+      "encounters": 173871,
+      "diagnoses": 561549,
+      "medications": 533576,
+      "labs": 1372822,
+      "ed_visits": 169122
+    },
+    "completeness": {
+      "patients": {
+        "patient_id": 0.0,
+        "birth_year": 0.0,
+        "sex": 0.0,
+        "insurance": 0.0,
+        "ses_quintile": 0.0,
+        "death_ts": 0.9775666666666667
+      },
+      "encounters": {
+        "encounter_id": 0.0,
+        "patient_id": 0.0,
+        "facility_id": 0.0,
+        "admit_ts": 0.0,
+        "discharge_ts": 0.0,
+        "admission_type": 0.0,
+        "admit_source": 0.0,
+        "discharge_disposition": 0.0,
+        "principal_dx": 0.0,
+        "icu_stay": 0.0,
+        "n_procedures": 0.0,
+        "is_planned_admission": 0.0
+      },
+      "labs": {
+        "encounter_id": 0.0,
+        "patient_id": 0.0,
+        "facility_id": 0.0,
+        "lab_name": 0.0,
+        "collected_ts": 0.0,
+        "value": 0.0,
+        "unit": 0.0
+      }
+    },
+    "referential_integrity": {
+      "diagnoses_orphan_encounters": 0,
+      "medications_orphan_encounters": 0,
+      "labs_orphan_encounters": 0,
+      "encounters_orphan_patients": 0,
+      "encounters_orphan_facilities": 0,
+      "ed_orphan_patients": 0
+    },
+    "unit_shift_cells": [
+      {
+        "facility_id": "F04",
+        "month": "2023-06-01",
+        "ratio_vs_network_median": 81.5,
+        "n": 440
+      },
+      {
+        "facility_id": "F04",
+        "month": "2023-07-01",
+        "ratio_vs_network_median": 85.5,
+        "n": 503
+      },
+      {
+        "facility_id": "F04",
+        "month": "2023-08-01",
+        "ratio_vs_network_median": 83.4,
+        "n": 486
+      },
+      {
+        "facility_id": "F04",
+        "month": "2023-09-01",
+        "ratio_vs_network_median": 82.5,
+        "n": 423
+      },
+      {
+        "facility_id": "F04",
+        "month": "2023-10-01",
+        "ratio_vs_network_median": 89.8,
+        "n": 402
+      },
+      {
+        "facility_id": "F04",
+        "month": "2023-11-01",
+        "ratio_vs_network_median": 82.4,
+        "n": 440
+      },
+      {
+        "facility_id": "F04",
+        "month": "2023-12-01",
+        "ratio_vs_network_median": 84.8,
+        "n": 515
+      },
+      {
+        "facility_id": "F04",
+        "month": "2024-01-01",
+        "ratio_vs_network_median": 84.7,
+        "n": 505
+      },
+      {
+        "facility_id": "F04",
+        "month": "2024-02-01",
+        "ratio_vs_network_median": 85.8,
+        "n": 430
+      },
+      {
+        "facility_id": "F04",
+        "month": "2024-03-01",
+        "ratio_vs_network_median": 85.9,
+        "n": 471
+      },
+      {
+        "facility_id": "F04",
+        "month": "2024-04-01",
+        "ratio_vs_network_median": 85.8,
+        "n": 470
+      },
+      {
+        "facility_id": "F04",
+        "month": "2024-05-01",
+        "ratio_vs_network_median": 90.8,
+        "n": 474
+      },
+      {
+        "facility_id": "F04",
+        "month": "2024-06-01",
+        "ratio_vs_network_median": 79.2,
+        "n": 455
+      },
+      {
+        "facility_id": "F04",
+        "month": "2024-07-01",
+        "ratio_vs_network_median": 83.3,
+        "n": 489
+      },
+      {
+        "facility_id": "F04",
+        "month": "2024-08-01",
+        "ratio_vs_network_median": 80.4,
+        "n": 507
+      },
+      {
+        "facility_id": "F04",
+        "month": "2024-09-01",
+        "ratio_vs_network_median": 85.5,
+        "n": 447
+      },
+      {
+        "facility_id": "F04",
+        "month": "2024-10-01",
+        "ratio_vs_network_median": 86.5,
+        "n": 469
+      },
+      {
+        "facility_id": "F04",
+        "month": "2024-11-01",
+        "ratio_vs_network_median": 86.0,
+        "n": 473
+      },
+      {
+        "facility_id": "F04",
+        "month": "2024-12-01",
+        "ratio_vs_network_median": 84.4,
+        "n": 504
+      },
+      {
+        "facility_id": "F04",
+        "month": "2025-01-01",
+        "ratio_vs_network_median": 82.9,
+        "n": 457
+      },
+      {
+        "facility_id": "F04",
+        "month": "2025-02-01",
+        "ratio_vs_network_median": 85.5,
+        "n": 447
+      },
+      {
+        "facility_id": "F04",
+        "month": "2025-03-01",
+        "ratio_vs_network_median": 82.1,
+        "n": 507
+      },
+      {
+        "facility_id": "F04",
+        "month": "2025-04-01",
+        "ratio_vs_network_median": 86.7,
+        "n": 446
+      },
+      {
+        "facility_id": "F04",
+        "month": "2025-05-01",
+        "ratio_vs_network_median": 82.3,
+        "n": 524
+      },
+      {
+        "facility_id": "F04",
+        "month": "2025-06-01",
+        "ratio_vs_network_median": 83.2,
+        "n": 459
+      },
+      {
+        "facility_id": "F04",
+        "month": "2025-07-01",
+        "ratio_vs_network_median": 84.8,
+        "n": 456
+      },
+      {
+        "facility_id": "F04",
+        "month": "2025-08-01",
+        "ratio_vs_network_median": 82.3,
+        "n": 446
+      },
+      {
+        "facility_id": "F04",
+        "month": "2025-09-01",
+        "ratio_vs_network_median": 84.4,
+        "n": 461
+      },
+      {
+        "facility_id": "F04",
+        "month": "2025-10-01",
+        "ratio_vs_network_median": 87.6,
+        "n": 510
+      },
+      {
+        "facility_id": "F04",
+        "month": "2025-11-01",
+        "ratio_vs_network_median": 90.4,
+        "n": 446
+      },
+      {
+        "facility_id": "F04",
+        "month": "2025-12-01",
+        "ratio_vs_network_median": 84.0,
+        "n": 490
+      },
+      {
+        "facility_id": "F04",
+        "month": "2026-01-01",
+        "ratio_vs_network_median": 76.8,
+        "n": 37
+      }
+    ]
+  },
+  "post": {
+    "row_counts": {
+      "facilities": 10,
+      "patients": 90000,
+      "encounters": 173438,
+      "diagnoses": 561275,
+      "medications": 533324,
+      "labs": 1367992,
+      "ed_visits": 169122,
+      "_quarantine_encounters": 86
+    },
+    "referential_integrity": {
+      "diagnoses_orphan_encounters": 0,
+      "medications_orphan_encounters": 0,
+      "labs_orphan_encounters": 0,
+      "encounters_orphan_patients": 0,
+      "encounters_orphan_facilities": 0,
+      "ed_orphan_patients": 0
+    },
+    "duplicate_encounter_ids": 0,
+    "temporal_violations": 0,
+    "implausible_labs": 0,
+    "completeness": {
+      "patients": {
+        "patient_id": 0.0,
+        "birth_year": 0.0,
+        "sex": 0.0,
+        "insurance": 0.0,
+        "ses_quintile": 0.0,
+        "death_ts": 0.9775666666666667
+      },
+      "encounters": {
+        "encounter_id": 0.0,
+        "patient_id": 0.0,
+        "facility_id": 0.0,
+        "admit_ts": 0.0,
+        "discharge_ts": 0.0,
+        "admission_type": 0.0,
+        "admit_source": 0.0,
+        "discharge_disposition": 0.0,
+        "principal_dx": 0.0,
+        "icu_stay": 0.0,
+        "n_procedures": 0.0,
+        "is_planned_admission": 0.0
+      },
+      "labs": {
+        "encounter_id": 0.0,
+        "patient_id": 0.0,
+        "facility_id": 0.0,
+        "lab_name": 0.0,
+        "collected_ts": 0.0,
+        "value": 0.0,
+        "unit": 0.0
+      }
+    },
+    "monthly_encounters": [
+      {
+        "month": "2021-01-01",
+        "encounters": 1572
+      },
+      {
+        "month": "2021-02-01",
+        "encounters": 1568
+      },
+      {
+        "month": "2021-03-01",
+        "encounters": 1860
+      },
+      {
+        "month": "2021-04-01",
+        "encounters": 1957
+      },
+      {
+        "month": "2021-05-01",
+        "encounters": 2070
+      },
+      {
+        "month": "2021-06-01",
+        "encounters": 2114
+      },
+      {
+        "month": "2021-07-01",
+        "encounters": 2169
+      },
+      {
+        "month": "2021-08-01",
+        "encounters": 2336
+      },
+      {
+        "month": "2021-09-01",
+        "encounters": 2326
+      },
+      {
+        "month": "2021-10-01",
+        "encounters": 2483
+      },
+      {
+        "month": "2021-11-01",
+        "encounters": 2371
+      },
+      {
+        "month": "2021-12-01",
+        "encounters": 2604
+      },
+      {
+        "month": "2022-01-01",
+        "encounters": 2664
+      },
+      {
+        "month": "2022-02-01",
+        "encounters": 2445
+      },
+      {
+        "month": "2022-03-01",
+        "encounters": 2842
+      },
+      {
+        "month": "2022-04-01",
+        "encounters": 2642
+      },
+      {
+        "month": "2022-05-01",
+        "encounters": 2819
+      },
+      {
+        "month": "2022-06-01",
+        "encounters": 2673
+      },
+      {
+        "month": "2022-07-01",
+        "encounters": 2932
+      },
+      {
+        "month": "2022-08-01",
+        "encounters": 2971
+      },
+      {
+        "month": "2022-09-01",
+        "encounters": 2805
+      },
+      {
+        "month": "2022-10-01",
+        "encounters": 2961
+      },
+      {
+        "month": "2022-11-01",
+        "encounters": 2891
+      },
+      {
+        "month": "2022-12-01",
+        "encounters": 3069
+      },
+      {
+        "month": "2023-01-01",
+        "encounters": 3077
+      },
+      {
+        "month": "2023-02-01",
+        "encounters": 2704
+      },
+      {
+        "month": "2023-03-01",
+        "encounters": 3245
+      },
+      {
+        "month": "2023-04-01",
+        "encounters": 3060
+      },
+      {
+        "month": "2023-05-01",
+        "encounters": 3089
+      },
+      {
+        "month": "2023-06-01",
+        "encounters": 3032
+      },
+      {
+        "month": "2023-07-01",
+        "encounters": 3212
+      },
+      {
+        "month": "2023-08-01",
+        "encounters": 3102
+      },
+      {
+        "month": "2023-09-01",
+        "encounters": 3083
+      },
+      {
+        "month": "2023-10-01",
+        "encounters": 3145
+      },
+      {
+        "month": "2023-11-01",
+        "encounters": 3096
+      },
+      {
+        "month": "2023-12-01",
+        "encounters": 3219
+      },
+      {
+        "month": "2024-01-01",
+        "encounters": 3240
+      },
+      {
+        "month": "2024-02-01",
+        "encounters": 3026
+      },
+      {
+        "month": "2024-03-01",
+        "encounters": 3223
+      },
+      {
+        "month": "2024-04-01",
+        "encounters": 3175
+      },
+      {
+        "month": "2024-05-01",
+        "encounters": 3245
+      },
+      {
+        "month": "2024-06-01",
+        "encounters": 3075
+      },
+      {
+        "month": "2024-07-01",
+        "encounters": 3276
+      },
+      {
+        "month": "2024-08-01",
+        "encounters": 3290
+      },
+      {
+        "month": "2024-09-01",
+        "encounters": 3172
+      },
+      {
+        "month": "2024-10-01",
+        "encounters": 3335
+      },
+      {
+        "month": "2024-11-01",
+        "encounters": 3108
+      },
+      {
+        "month": "2024-12-01",
+        "encounters": 3245
+      },
+      {
+        "month": "2025-01-01",
+        "encounters": 3293
+      },
+      {
+        "month": "2025-02-01",
+        "encounters": 3064
+      },
+      {
+        "month": "2025-03-01",
+        "encounters": 3295
+      },
+      {
+        "month": "2025-04-01",
+        "encounters": 3162
+      },
+      {
+        "month": "2025-05-01",
+        "encounters": 3281
+      },
+      {
+        "month": "2025-06-01",
+        "encounters": 3170
+      },
+      {
+        "month": "2025-07-01",
+        "encounters": 3300
+      },
+      {
+        "month": "2025-08-01",
+        "encounters": 3206
+      },
+      {
+        "month": "2025-09-01",
+        "encounters": 3219
+      },
+      {
+        "month": "2025-10-01",
+        "encounters": 3329
+      },
+      {
+        "month": "2025-11-01",
+        "encounters": 3264
+      },
+      {
+        "month": "2025-12-01",
+        "encounters": 3237
+      }
+    ],
+    "volume_anomalies": [
+      {
+        "facility_id": "F01",
+        "month": "2021-01-01",
+        "n": 287,
+        "robust_z": -4.68
+      },
+      {
+        "facility_id": "F01",
+        "month": "2021-02-01",
+        "n": 276,
+        "robust_z": -4.89
+      },
+      {
+        "facility_id": "F01",
+        "month": "2021-03-01",
+        "n": 306,
+        "robust_z": -4.32
+      },
+      {
+        "facility_id": "F01",
+        "month": "2021-06-01",
+        "n": 339,
+        "robust_z": -3.7
+      },
+      {
+        "facility_id": "F01",
+        "month": "2021-07-01",
+        "n": 345,
+        "robust_z": -3.58
+      },
+      {
+        "facility_id": "F02",
+        "month": "2021-02-01",
+        "n": 99,
+        "robust_z": -3.73
+      },
+      {
+        "facility_id": "F03",
+        "month": "2021-01-01",
+        "n": 174,
+        "robust_z": -4.37
+      },
+      {
+        "facility_id": "F03",
+        "month": "2021-02-01",
+        "n": 183,
+        "robust_z": -4.16
+      },
+      {
+        "facility_id": "F04",
+        "month": "2021-01-01",
+        "n": 120,
+        "robust_z": -3.81
+      },
+      {
+        "facility_id": "F04",
+        "month": "2021-02-01",
+        "n": 105,
+        "robust_z": -4.25
+      },
+      {
+        "facility_id": "F05",
+        "month": "2021-01-01",
+        "n": 318,
+        "robust_z": -5.83
+      },
+      {
+        "facility_id": "F05",
+        "month": "2021-02-01",
+        "n": 323,
+        "robust_z": -5.74
+      },
+      {
+        "facility_id": "F05",
+        "month": "2021-03-01",
+        "n": 395,
+        "robust_z": -4.53
+      },
+      {
+        "facility_id": "F05",
+        "month": "2021-04-01",
+        "n": 452,
+        "robust_z": -3.57
+      },
+      {
+        "facility_id": "F10",
+        "month": "2021-01-01",
+        "n": 199,
+        "robust_z": -3.77
+      }
+    ]
+  },
+  "injected_defects_ledger": {
+    "duplicate_encounter_rows": 347,
+    "discharge_before_admit_rows": 86,
+    "unknown_disposition_rows": 728,
+    "impossible_lab_values": 4118,
+    "creatinine_unit_shift_rows": 14541,
+    "creatinine_unit_shift_facility": "F04",
+    "creatinine_unit_shift_from": "2023-06-01"
+  }
+}

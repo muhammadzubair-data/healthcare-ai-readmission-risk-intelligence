@@ -1,0 +1,70 @@
+feature,label,group,mean_abs_shap,direction_corr
+dx_group,Principal diagnosis group,index stay,0.18479922900953485,
+charlson_score,Comorbidity score (Charlson-style),diagnoses,0.15836236980795293,0.9674611623935269
+prior_los_days_12m,Inpatient days in prior 12 months,history,0.11734738115584784,0.8969976781768156
+los_days,Length of stay (days),index stay,0.11580186605107955,0.9149780172605083
+n_secondary_dx,Secondary diagnoses coded,diagnoses,0.1145328511173009,0.9521451009297682
+discharge_disposition,Discharge destination,index stay,0.09053012960584415,
+n_discharge_meds,Number of discharge medications,medications,0.060467162378262995,0.8952268175110915
+age,Age,demographic,0.05461732364049476,0.9373679283608475
+ses_quintile,Area deprivation quintile,demographic,0.04857180342613944,0.958677407581003
+egfr_last,eGFR at discharge,labs,0.04216205994370241,-0.823025574731428
+ed_visits_prior_12m,ED visits in prior 12 months,history,0.042115680170923674,0.8765209859536972
+lab_albumin_last,Albumin at discharge,labs,0.03387669757296941,-0.932589896228506
+days_since_last_discharge,Days since last discharge,history,0.033541745872631416,-0.7227090550845764
+lab_sodium_last,Sodium at discharge,labs,0.027899634763998944,-0.8768812093596876
+lab_creatinine_last,Creatinine at discharge,labs,0.021704268824176705,0.8258313554074511
+insurance,Payer,demographic,0.019893552643779563,
+lab_hemoglobin_last,Hemoglobin at discharge,labs,0.014685968911098987,-0.8465750167756555
+polypharmacy,10+ discharge medications,medications,0.013662992507675246,0.9771164042023073
+prior_admissions_12m,Admissions in prior 12 months,history,0.013053187660370748,0.8761352295636027
+acute_admission,Emergency or urgent admission,index stay,0.012060807294005334,0.9756945297059713
+icu_stay,ICU stay,index stay,0.008883900175214017,0.9643452843187711
+n_prior_encounters,Prior encounters observed,history,0.007693009336074387,0.7793881189992352
+prior_admissions_6m,Admissions in prior 6 months,history,0.007041615301015514,0.81625799647034
+discharge_month_cos,Seasonality (cos of discharge month),index stay,0.0069409323610920256,0.8629884025964079
+lab_creatinine_change,Creatinine change during stay,labs,0.00598365643068041,-0.3247065990394193
+lab_hemoglobin_change,Hemoglobin change during stay,labs,0.005782285051185089,0.7792811579172935
+lab_wbc_last,WBC at discharge,labs,0.0053985460191611325,0.4006039156215152
+admission_type,Admission type,index stay,0.004219913417896319,
+prior_readmissions_12m,Prior 30-day returns (12m),history,0.0033991671110122934,0.7038730973353463
+cm_chf,History of chf,diagnoses,0.0033813390978741868,0.7426926020247658
+lab_sodium_change,Sodium change during stay,labs,0.003186607272005415,0.3290048612050521
+lab_wbc_change,Wbc change during stay,labs,0.002986344111682555,0.18321960562115347
+cm_diabetes,History of diabetes,diagnoses,0.0029331327981457545,0.8050734776283957
+ed_visits_prior_6m,ED visits in prior 6 months,history,0.0029118816653820926,0.8204707434271203
+cm_dementia,History of dementia,diagnoses,0.0028185402166507516,0.8386315923734197
+lab_albumin_change,Albumin change during stay,labs,0.0027302882400621485,-0.027140804079231667
+discharge_month_sin,Seasonality (sin of discharge month),index stay,0.0022064015071358322,-0.48949764798583967
+cm_ckd,History of ckd,diagnoses,0.00207844822007336,0.6983866425880668
+med_insulin,Insulin at discharge,medications,0.0020748398133263995,0.7973220993601388
+n_high_risk_med_classes,High-risk medication classes,medications,0.0016897094405240898,0.49626301156698577
+history_window_days,Observable history (days),history,0.001400009612891763,
+med_steroid,Steroid at discharge,medications,0.0013323882650674718,-0.820682431299986
+sex,Sex,demographic,0.0011418055018711766,
+admit_source,Admission source,index stay,0.001092056106242915,
+med_antibiotic,Antibiotic at discharge,medications,0.0009871662523520807,-0.7439651707464452
+cm_cancer,History of cancer,diagnoses,0.0008636964399970662,-0.7463342776867081
+cm_cad,History of cad,diagnoses,0.0008414795063824819,-0.924787665482652
+weekend_discharge,Weekend discharge,index stay,0.000757757577156734,0.690195707674037
+cm_depression,History of depression,diagnoses,0.0006387764068093407,0.7063513488187888
+med_beta_blocker,Beta Blocker at discharge,medications,0.0006062670216764438,-0.6708126340699432
+med_ace_arb,Ace Arb at discharge,medications,0.0004985359773982612,0.17258593123823426
+med_opioid,Opioid at discharge,medications,0.0004902726051155172,0.5844943476339682
+med_antipsychotic,Antipsychotic at discharge,medications,0.00042473506134274694,0.7551648074681702
+is_readmission_of_prior,Admitted within 30 days of prior discharge,history,0.00040544104443396983,0.3307470668724848
+cm_htn,History of htn,diagnoses,0.00023603919934986258,-0.4602573362697594
+med_statin,Statin at discharge,medications,0.00018484259455841046,-0.35679230334148215
+med_diuretic,Diuretic at discharge,medications,0.00012351170958464723,-0.20608343354769673
+n_lab_values,Lab results recorded,labs,0.0001032942326545603,0.23030709677521177
+cm_afib,History of afib,diagnoses,8.231529071531306e-05,0.2753041524227657
+n_procedures,Procedures,index stay,0.0,
+cm_copd,History of copd,diagnoses,0.0,
+lab_wbc_missing,Wbc not measured,labs,0.0,
+lab_hemoglobin_missing,Hemoglobin not measured,labs,0.0,
+lab_creatinine_missing,Creatinine not measured,labs,0.0,
+lab_sodium_missing,Sodium not measured,labs,0.0,
+cm_liver,History of liver,diagnoses,0.0,
+cm_stroke_hx,History of stroke hx,diagnoses,0.0,
+med_anticoagulant,Anticoagulant at discharge,medications,0.0,
+lab_albumin_missing,Albumin not measured,labs,0.0,

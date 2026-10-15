@@ -1,0 +1,10 @@
+variant,avoided,net
+Base case,436.145,5929541.0
+Intervention effect x0.5,217.8075,2654478.5
+Intervention effect x1.5,649.3525,9127653.5
+Minutes per patient x0.75,546.87,7588158.0
+Minutes per patient x1.25,365.0575,4863457.5
+Staffing x0.5,251.535,3466815.0
+Staffing x2,743.1,9916098.0
+Cost per readmission x0.5,436.145,2658453.5
+Cost per readmission x1.5,436.145,9200628.5

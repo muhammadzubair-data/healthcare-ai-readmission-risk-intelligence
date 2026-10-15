@@ -1,0 +1,309 @@
+{
+  "stages": [
+    {
+      "stage": "1_generate",
+      "timestamp_utc": "2026-10-14T12:41:36+00:00",
+      "config_fingerprint": "0e35608da71cc5b8",
+      "inputs": [],
+      "outputs": [
+        {
+          "path": "/home/claude/hospital-readmission-risk-platform/data/raw/facilities.parquet",
+          "sha256": "88a43a5ced814c276df761a95f45d25930e649f6a5c99e2b18a0deedfd03666f",
+          "bytes": 3340
+        },
+        {
+          "path": "/home/claude/hospital-readmission-risk-platform/data/raw/patients.parquet",
+          "sha256": "a87550370b0937651b9357db77f0cd0663a23d576591bbff42188bd0e2aa562f",
+          "bytes": 853167
+        },
+        {
+          "path": "/home/claude/hospital-readmission-risk-platform/data/raw/encounters.parquet",
+          "sha256": "fcb27d46d8de1527c63cf8d29aec78f13c1e3a75789c214add3fa7d3a0cc52b7",
+          "bytes": 4899352
+        },
+        {
+          "path": "/home/claude/hospital-readmission-risk-platform/data/raw/diagnoses.parquet",
+          "sha256": "54bc1faa97500a4e74a41724222a315c5232009d36c01f17739f8687d731db88",
+          "bytes": 1807539
+        },
+        {
+          "path": "/home/claude/hospital-readmission-risk-platform/data/raw/medications.parquet",
+          "sha256": "75aa17ce9f3b5b169069a630ba5f7b4b8155aea0e8695a6a73c57d0e17eaf9f0",
+          "bytes": 1772979
+        },
+        {
+          "path": "/home/claude/hospital-readmission-risk-platform/data/raw/labs.parquet",
+          "sha256": "c9a6a2c60c00fcaf20ab7a41321f6f202ea69382d4f4822d87374fee06c14fff",
+          "bytes": 32467060
+        },
+        {
+          "path": "/home/claude/hospital-readmission-risk-platform/data/raw/ed_visits.parquet",
+          "sha256": "7442dfdf27af01ea6ae60f80d6933d274a3d55764310daab836e692d235756d7",
+          "bytes": 3020189
+        },
+        {
+          "path": "/home/claude/hospital-readmission-risk-platform/data/raw/_synthetic_truth.parquet",
+          "sha256": "a88ae9c46d85c392b2d89e5e1b16732d147b22c0a547fffab7b756e0d9c92322",
+          "bytes": 2862480
+        }
+      ],
+      "row_counts": {
+        "facilities": 10,
+        "patients": 90000,
+        "encounters": 173871,
+        "diagnoses": 561549,
+        "medications": 533576,
+        "labs": 1372822,
+        "ed_visits": 169122,
+        "_truth": 173524
+      },
+      "notes": {
+        "synthetic": true,
+        "seed": 42,
+        "injected_defects": {
+          "duplicate_encounter_rows": 347,
+          "discharge_before_admit_rows": 86,
+          "unknown_disposition_rows": 728,
+          "impossible_lab_values": 4118,
+          "creatinine_unit_shift_rows": 14541,
+          "creatinine_unit_shift_facility": "F04",
+          "creatinine_unit_shift_from": "2023-06-01"
+        }
+      }
+    },
+    {
+      "stage": "2_clean",
+      "timestamp_utc": "2026-10-14T12:52:32+00:00",
+      "config_fingerprint": "0e35608da71cc5b8",
+      "inputs": [
+        {
+          "path": "/home/claude/hospital-readmission-risk-platform/data/raw/facilities.parquet",
+          "sha256": "88a43a5ced814c276df761a95f45d25930e649f6a5c99e2b18a0deedfd03666f"
+        },
+        {
+          "path": "/home/claude/hospital-readmission-risk-platform/data/raw/patients.parquet",
+          "sha256": "a87550370b0937651b9357db77f0cd0663a23d576591bbff42188bd0e2aa562f"
+        },
+        {
+          "path": "/home/claude/hospital-readmission-risk-platform/data/raw/encounters.parquet",
+          "sha256": "fcb27d46d8de1527c63cf8d29aec78f13c1e3a75789c214add3fa7d3a0cc52b7"
+        },
+        {
+          "path": "/home/claude/hospital-readmission-risk-platform/data/raw/diagnoses.parquet",
+          "sha256": "54bc1faa97500a4e74a41724222a315c5232009d36c01f17739f8687d731db88"
+        },
+        {
+          "path": "/home/claude/hospital-readmission-risk-platform/data/raw/medications.parquet",
+          "sha256": "75aa17ce9f3b5b169069a630ba5f7b4b8155aea0e8695a6a73c57d0e17eaf9f0"
+        },
+        {
+          "path": "/home/claude/hospital-readmission-risk-platform/data/raw/labs.parquet",
+          "sha256": "c9a6a2c60c00fcaf20ab7a41321f6f202ea69382d4f4822d87374fee06c14fff"
+        },
+        {
+          "path": "/home/claude/hospital-readmission-risk-platform/data/raw/ed_visits.parquet",
+          "sha256": "7442dfdf27af01ea6ae60f80d6933d274a3d55764310daab836e692d235756d7"
+        }
+      ],
+      "outputs": [
+        {
+          "path": "/home/claude/hospital-readmission-risk-platform/data/interim/facilities.parquet",
+          "sha256": "88a43a5ced814c276df761a95f45d25930e649f6a5c99e2b18a0deedfd03666f",
+          "bytes": 3340
+        },
+        {
+          "path": "/home/claude/hospital-readmission-risk-platform/data/interim/patients.parquet",
+          "sha256": "3ddae229cf6563538b579ffb8af886f1dfd7ca04906ba9f71b605b080487c887",
+          "bytes": 1459854
+        },
+        {
+          "path": "/home/claude/hospital-readmission-risk-platform/data/interim/encounters.parquet",
+          "sha256": "7ea13fde8bab6c6127eefc13eec671925662022c5354d741e76bee27b95f52b5",
+          "bytes": 7284846
+        },
+        {
+          "path": "/home/claude/hospital-readmission-risk-platform/data/interim/diagnoses.parquet",
+          "sha256": "cad7f498733eb021a4df06af298f75a753d0ab2178f3bd9b8932ea84b1f3dc6e",
+          "bytes": 3484860
+        },
+        {
+          "path": "/home/claude/hospital-readmission-risk-platform/data/interim/medications.parquet",
+          "sha256": "71553943c49ccbb57d531e740d76d080803aa46c3e6c827f263b8bf3b9ec2400",
+          "bytes": 3400261
+        },
+        {
+          "path": "/home/claude/hospital-readmission-risk-platform/data/interim/labs.parquet",
+          "sha256": "7c0c4d4ca39fdd098ede90bc7f8f7fab426741e2d69b3dec4ebe6069a93e6c46",
+          "bytes": 51836888
+        },
+        {
+          "path": "/home/claude/hospital-readmission-risk-platform/data/interim/ed_visits.parquet",
+          "sha256": "b74dfccc6ed486796233f35aa5a8734ff5896444281df319a2628ee0bfe3b5fc",
+          "bytes": 5328660
+        },
+        {
+          "path": "/home/claude/hospital-readmission-risk-platform/data/interim/_quarantine_encounters.parquet",
+          "sha256": "dc13fac1a23fddad43dd16a12d11d33c0e86f326ad4f65a0be52da6cd0bfc2b6",
+          "bytes": 12208
+        },
+        {
+          "path": "/home/claude/hospital-readmission-risk-platform/artifacts/dq_report.json",
+          "sha256": "5e7687ac0faaf03e05876a3f053814586497ad7f87937f6aeef5525c170e043a",
+          "bytes": 14511
+        }
+      ],
+      "row_counts": {
+        "facilities": 10,
+        "patients": 90000,
+        "encounters": 173438,
+        "diagnoses": 561275,
+        "medications": 533324,
+        "labs": 1367992,
+        "ed_visits": 169122,
+        "_quarantine_encounters": 86
+      },
+      "notes": {
+        "phi_screen": "passed (no identifier-like columns or value patterns found)",
+        "duplicate_encounters_dropped": 347,
+        "encounters_quarantined_bad_dates": 86,
+        "unknown_disposition_rows": 726,
+        "creatinine_unit_shift_rows_converted": 14547,
+        "creatinine_unit_shift_facilities": [
+          "F04"
+        ],
+        "implausible_lab_values_removed": 4126,
+        "diagnoses_orphans_dropped": 0,
+        "medications_orphans_dropped": 0,
+        "labs_orphans_dropped": 0,
+        "date_shift": "not applied (synthetic data have no real calendar dates)",
+        "pseudonymisation": "HMAC-SHA256 keyed pseudonyms (DEMO SALT in use - set READMIT_SALT for any non-demo data)"
+      }
+    },
+    {
+      "stage": "3_features",
+      "timestamp_utc": "2026-10-14T12:52:42+00:00",
+      "config_fingerprint": "0e35608da71cc5b8",
+      "inputs": [
+        {
+          "path": "/home/claude/hospital-readmission-risk-platform/data/interim/facilities.parquet",
+          "sha256": "88a43a5ced814c276df761a95f45d25930e649f6a5c99e2b18a0deedfd03666f"
+        },
+        {
+          "path": "/home/claude/hospital-readmission-risk-platform/data/interim/patients.parquet",
+          "sha256": "3ddae229cf6563538b579ffb8af886f1dfd7ca04906ba9f71b605b080487c887"
+        },
+        {
+          "path": "/home/claude/hospital-readmission-risk-platform/data/interim/encounters.parquet",
+          "sha256": "7ea13fde8bab6c6127eefc13eec671925662022c5354d741e76bee27b95f52b5"
+        },
+        {
+          "path": "/home/claude/hospital-readmission-risk-platform/data/interim/diagnoses.parquet",
+          "sha256": "cad7f498733eb021a4df06af298f75a753d0ab2178f3bd9b8932ea84b1f3dc6e"
+        },
+        {
+          "path": "/home/claude/hospital-readmission-risk-platform/data/interim/medications.parquet",
+          "sha256": "71553943c49ccbb57d531e740d76d080803aa46c3e6c827f263b8bf3b9ec2400"
+        },
+        {
+          "path": "/home/claude/hospital-readmission-risk-platform/data/interim/labs.parquet",
+          "sha256": "7c0c4d4ca39fdd098ede90bc7f8f7fab426741e2d69b3dec4ebe6069a93e6c46"
+        },
+        {
+          "path": "/home/claude/hospital-readmission-risk-platform/data/interim/ed_visits.parquet",
+          "sha256": "b74dfccc6ed486796233f35aa5a8734ff5896444281df319a2628ee0bfe3b5fc"
+        }
+      ],
+      "outputs": [
+        {
+          "path": "/home/claude/hospital-readmission-risk-platform/data/processed/features.parquet",
+          "sha256": "8c61adac5168a500a629f203f2639777a330a5523b39370378694695efe58ea2",
+          "bytes": 27785300
+        }
+      ],
+      "row_counts": {
+        "features": 173438
+      },
+      "notes": {
+        "prediction_time": "index discharge",
+        "history_rule": "events finished strictly before admission",
+        "all_encounters": 173438,
+        "excluded_by_disposition": 1496,
+        "excluded_disposition_breakdown": {
+          "disposition:HOSPICE": 915,
+          "disposition:EXPIRED": 386,
+          "disposition:TRANSFER_ACUTE": 195
+        },
+        "eligible_index_discharges": 171942,
+        "follow_up_incomplete_live_worklist": 3651,
+        "modeling_cohort": 168291,
+        "modeling_readmission_rate": 0.14403028088251896,
+        "patients": 89973,
+        "patients_over_lag_depth": 104,
+        "max_encounters_per_patient": 32
+      }
+    },
+    {
+      "stage": "4_models",
+      "timestamp_utc": "2026-10-14T12:56:02+00:00",
+      "config_fingerprint": "0e35608da71cc5b8",
+      "inputs": [
+        {
+          "path": "/home/claude/hospital-readmission-risk-platform/data/processed/features.parquet",
+          "sha256": "8c61adac5168a500a629f203f2639777a330a5523b39370378694695efe58ea2"
+        }
+      ],
+      "outputs": [
+        {
+          "path": "/home/claude/hospital-readmission-risk-platform/artifacts/metrics.json",
+          "sha256": "138cfa0094ca32ef1721d39bde37b30bcf7579d30f448161a52fe27afd916784",
+          "bytes": 30496
+        },
+        {
+          "path": "/home/claude/hospital-readmission-risk-platform/artifacts/scored.parquet",
+          "sha256": "55a0d93395641a794dfe0272be7e1cd2c6a0540d330a7cf84dc0c0bc185f95a6",
+          "bytes": 14765085
+        },
+        {
+          "path": "/home/claude/hospital-readmission-risk-platform/artifacts/eda_encounters.parquet",
+          "sha256": "88a1bde6d82a0833e4f9521c0d434e16b0a63c3c025064b9090f86b0a5645edb",
+          "bytes": 6709402
+        },
+        {
+          "path": "/home/claude/hospital-readmission-risk-platform/artifacts/models/lightgbm.txt",
+          "sha256": "dc56e2e30249938fb4a38426d6c5098e40cbe396e1f072b595dc8e761ef1d0bc",
+          "bytes": 226178
+        },
+        {
+          "path": "/home/claude/hospital-readmission-risk-platform/artifacts/models/meta.json",
+          "sha256": "288a8aab5e2f23970e3077406aabf1cd7e01033094013c7d202b284b3ccd68de",
+          "bytes": 5527
+        }
+      ],
+      "row_counts": {
+        "scored": 74164,
+        "eda": 173438
+      },
+      "notes": {
+        "model_selection": "validation period only; test period untouched until final scoring",
+        "tier_cutoffs": [
+          0.149822695035461,
+          0.3164277839029768
+        ]
+      }
+    }
+  ],
+  "environment": {
+    "libraries": {
+      "numpy": "2.5.3",
+      "pandas": "3.0.5",
+      "scikit-learn": "1.9.1",
+      "lightgbm": "4.7.0",
+      "shap": "0.53.0",
+      "streamlit": "1.65.0",
+      "pyarrow": "25.0.1",
+      "plotly": "7.1.0",
+      "python": "3.13.16"
+    },
+    "git_commit": null
+  }
+}

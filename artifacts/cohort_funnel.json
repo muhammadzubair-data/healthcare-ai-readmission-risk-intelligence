@@ -1,0 +1,16 @@
+{
+  "all_encounters": 173438,
+  "excluded_by_disposition": 1496,
+  "excluded_disposition_breakdown": {
+    "disposition:HOSPICE": 915,
+    "disposition:EXPIRED": 386,
+    "disposition:TRANSFER_ACUTE": 195
+  },
+  "eligible_index_discharges": 171942,
+  "follow_up_incomplete_live_worklist": 3651,
+  "modeling_cohort": 168291,
+  "modeling_readmission_rate": 0.14403028088251896,
+  "patients": 89973,
+  "patients_over_lag_depth": 104,
+  "max_encounters_per_patient": 32
+}

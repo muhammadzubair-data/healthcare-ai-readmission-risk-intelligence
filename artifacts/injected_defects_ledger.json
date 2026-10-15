@@ -1,0 +1,9 @@
+{
+  "duplicate_encounter_rows": 347,
+  "discharge_before_admit_rows": 86,
+  "unknown_disposition_rows": 728,
+  "impossible_lab_values": 4118,
+  "creatinine_unit_shift_rows": 14541,
+  "creatinine_unit_shift_facility": "F04",
+  "creatinine_unit_shift_from": "2023-06-01"
+}

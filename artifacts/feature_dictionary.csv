@@ -1,0 +1,70 @@
+feature,group,description
+age,demographic,"Age in years at admission, top-coded at 90"
+sex,demographic,Recorded sex (F/M)
+insurance,demographic,Primary payer category
+ses_quintile,demographic,"Synthetic area-deprivation quintile (1 = least, 5 = most deprived)"
+los_days,index stay,Length of stay in days
+icu_stay,index stay,ICU stay during the encounter
+n_procedures,index stay,Number of procedures
+acute_admission,index stay,Emergency or urgent admission
+admission_type,index stay,EMERGENCY / URGENT / ELECTIVE
+admit_source,index stay,ED / clinic referral / transfer in
+discharge_disposition,index stay,Where the patient was discharged to
+dx_group,index stay,Principal-diagnosis group derived from ICD-10
+weekend_discharge,index stay,Discharged on Saturday or Sunday
+discharge_month_sin,index stay,Seasonality (sin of discharge month)
+discharge_month_cos,index stay,Seasonality (cos of discharge month)
+n_secondary_dx,diagnoses,Number of secondary diagnoses coded on the encounter
+charlson_score,diagnoses,Simplified Charlson-style score from current + prior coded diagnoses
+n_lab_values,labs,Number of lab results recorded up to discharge
+egfr_last,labs,CKD-EPI 2021 eGFR from the last creatinine before discharge
+n_discharge_meds,medications,Total distinct drugs on the discharge medication list
+polypharmacy,medications,10 or more discharge drugs
+n_high_risk_med_classes,medications,Count of high-risk drug classes at discharge
+prior_admissions_6m,history,Completed admissions in the 6 months before this admission
+prior_admissions_12m,history,Completed admissions in the 12 months before this admission
+prior_los_days_12m,history,Total inpatient days in the prior 12 months
+prior_readmissions_12m,history,Prior admissions in the past 12 months that were themselves 30-day returns
+ed_visits_prior_6m,history,ED visits without admission in the 6 months before admission
+ed_visits_prior_12m,history,ED visits without admission in the 12 months before admission
+days_since_last_discharge,history,Days since previous discharge (missing = no prior encounter observed)
+is_readmission_of_prior,history,This admission began within 30 days of a prior discharge
+history_window_days,history,Days of look-back actually observable (capped at 365; left-censoring indicator)
+n_prior_encounters,history,Prior encounters observed in the data window
+cm_afib,diagnoses,Coded history of afib (current secondary dx or any prior encounter)
+cm_cad,diagnoses,Coded history of cad (current secondary dx or any prior encounter)
+cm_cancer,diagnoses,Coded history of cancer (current secondary dx or any prior encounter)
+cm_chf,diagnoses,Coded history of chf (current secondary dx or any prior encounter)
+cm_ckd,diagnoses,Coded history of ckd (current secondary dx or any prior encounter)
+cm_copd,diagnoses,Coded history of copd (current secondary dx or any prior encounter)
+cm_dementia,diagnoses,Coded history of dementia (current secondary dx or any prior encounter)
+cm_depression,diagnoses,Coded history of depression (current secondary dx or any prior encounter)
+cm_diabetes,diagnoses,Coded history of diabetes (current secondary dx or any prior encounter)
+cm_htn,diagnoses,Coded history of htn (current secondary dx or any prior encounter)
+cm_liver,diagnoses,Coded history of liver (current secondary dx or any prior encounter)
+cm_stroke_hx,diagnoses,Coded history of stroke hx (current secondary dx or any prior encounter)
+lab_sodium_last,labs,Last Sodium before discharge
+lab_sodium_change,labs,Last minus first Sodium during the stay
+lab_sodium_missing,labs,No Sodium measured during the stay
+lab_creatinine_last,labs,Last Creatinine before discharge
+lab_creatinine_change,labs,Last minus first Creatinine during the stay
+lab_creatinine_missing,labs,No Creatinine measured during the stay
+lab_hemoglobin_last,labs,Last Hemoglobin before discharge
+lab_hemoglobin_change,labs,Last minus first Hemoglobin during the stay
+lab_hemoglobin_missing,labs,No Hemoglobin measured during the stay
+lab_wbc_last,labs,Last Wbc before discharge
+lab_wbc_change,labs,Last minus first Wbc during the stay
+lab_wbc_missing,labs,No Wbc measured during the stay
+lab_albumin_last,labs,Last Albumin before discharge
+lab_albumin_change,labs,Last minus first Albumin during the stay
+lab_albumin_missing,labs,No Albumin measured during the stay
+med_anticoagulant,medications,Anticoagulant on discharge list
+med_insulin,medications,Insulin on discharge list
+med_opioid,medications,Opioid on discharge list
+med_diuretic,medications,Diuretic on discharge list
+med_antipsychotic,medications,Antipsychotic on discharge list
+med_steroid,medications,Steroid on discharge list
+med_beta_blocker,medications,Beta Blocker on discharge list
+med_statin,medications,Statin on discharge list
+med_antibiotic,medications,Antibiotic on discharge list
+med_ace_arb,medications,Ace Arb on discharge list

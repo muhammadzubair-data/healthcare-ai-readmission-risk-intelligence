@@ -1,0 +1,9 @@
+__pycache__/
+*.pyc
+.pytest_cache/
+.venv/
+data/
+artifacts/models/ensemble/
+artifacts/models/random_forest.joblib
+.streamlit/secrets.toml
+*.log

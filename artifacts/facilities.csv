@@ -1,0 +1,11 @@
+facility_id,facility_name,facility_type,licensed_beds
+F01,Harbor General Hospital,Academic,620
+F02,Northgate Community Hospital,Community,240
+F03,Riverbend Regional Medical Center,Regional,410
+F04,Summit Valley Hospital,Community,280
+F05,Lakeshore University Hospital,Academic,780
+F06,Prairie County Hospital,Rural,90
+F07,Eastbrook Medical Center,Regional,360
+F08,Westfield Community Hospital,Community,200
+F09,Cedar Ridge Hospital,Rural,110
+F10,St. Marlow Medical Center,Regional,450
