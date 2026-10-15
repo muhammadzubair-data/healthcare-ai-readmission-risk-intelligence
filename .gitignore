@@ -7,3 +7,6 @@ artifacts/models/ensemble/
 artifacts/models/random_forest.joblib
 .streamlit/secrets.toml
 *.log
+# Include Python data-processing modules
+!src/readmit/data/
+!src/readmit/data/*.py
